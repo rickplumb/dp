@@ -1,0 +1,34 @@
+phase 2
+
+The Google tag manager on the /aboutus & /survey pages has gone well, the tags are in place ready for when the code is released.
+
+Can I put the next request in the backlog please. I would like the same GTM code added to the pages & sub-pages of:
+
+/census
+/help
+/news
+
+Census pages will be the highest profile here, but the content on the pages appears to be quite straightforward.
+
+related to Implement google tag manager on About and Survey pages
+
+phase 3:
+
+I would like to implement Google Tag Manager code on all Dataset pages, these are pages with /datasets/ in the URL.
+
+• As part of this I'd like some items added to the DataLayer. There's details on how to code this here; https://developers.google.com/tag-manager/devguide. (We've already done it once on Data Discovery)
+
+The items are;
+1) The dataset title
+2) The release date (in yyyy/mm/dd format)
+3) The title of the publication that uses this data - accessed on the Right nav under 'Publications that use this data'
+
+For example, on the page https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/consumerpriceindices, the dataLayer would be
+
+<script>
+dataLayer = [{
+'datasetTitle': 'Consumer Price Inflation time series dataset',
+'releaseDate':'2017/05/16',
+'publicationTitle': 'UK consumer price inflation : Apr 2017'
+}];
+</script>
